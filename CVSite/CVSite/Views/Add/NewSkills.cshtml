@@ -1,0 +1,15 @@
+﻿@model CVSite.Models.Skills
+@{
+    ViewData["Title"] = "NewSkills";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>NewSkills</h1>
+<br />
+<form class="form-group" method="post">
+
+    @Html.LabelFor(x => x.Skill)
+    @Html.TextBoxFor(x => x.Skill, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Hobbie Add</button>
+</form>

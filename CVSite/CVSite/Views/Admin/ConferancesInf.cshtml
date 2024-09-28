@@ -1,0 +1,25 @@
+﻿@using CVSite.Models
+@model List<Conferance>
+@{
+    ViewData["Title"] = "ConferancesInf";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Conferances</h1>
+<br />
+<table class="table table-bordered">
+	<tr>
+		<td>Conferances</td
+		
+	</tr>
+	@foreach (var x in Model)
+	{
+		<tr>
+			<td>@x.Conferances</td>
+			<td><a href="/Admin/ConferancesGet/@x.ID" class="btn btn-warning">Update</a></td>
+			<td><a href="/Admin/ConferancesDelete/@x.ID" class="btn btn-danger">Delete</a></td>
+		</tr>
+	}
+</table>
+<a class="btn btn-primary" href="/Add/NewConferances">New Conferances</a>
+

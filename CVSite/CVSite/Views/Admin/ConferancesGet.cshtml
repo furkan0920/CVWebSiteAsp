@@ -1,0 +1,19 @@
+﻿@model CVSite.Models.Conferance
+@{
+	ViewData["Title"] = "ConferancesGet";
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Conferances</h1>
+<br />
+@using (Html.BeginForm("ConferancesUpdate", "Admin", FormMethod.Post))
+{
+	@Html.LabelFor(x => x.ID)
+	@Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+	<br />
+	@Html.LabelFor(x => x.Conferances)
+	@Html.TextAreaFor(x => x.Conferances, 15, 1, new { @class = "form-control" })
+	<br />
+	<button class="btn btn-success">Update</button>
+}
+

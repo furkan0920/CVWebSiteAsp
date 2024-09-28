@@ -1,0 +1,47 @@
+﻿@using CVSite.Models
+@model List<About>
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h2>About</h2>
+<br />
+@foreach (var x in Model)
+{
+	<table class="table table-bordered">
+		<tr>
+			<td>ID</td>
+			<td>@x.ID</td>
+		</tr>
+		<tr>
+			<td>Name</td>
+			<td>@x.Name</td>
+		</tr>
+		<tr>
+			<td>Surname</td>
+			<td>@x.Surname</td>
+		</tr>
+		<tr>
+			<td>Address</td>
+			<td>@x.Address</td>
+		</tr>
+		<tr>
+			<td>Phone</td>
+			<td>@x.Phone</td>
+		</tr>
+		<tr>
+			<td>Note</td>
+			<td>@x.Note</td>
+		</tr>
+		<tr>
+			<td>Photo</td>
+			<td>@x.Photo</td>
+		</tr>
+		<tr>
+			<td><a href="/Admin/UserGet/@x.ID" class="btn btn-warning">Update</a></td>
+		</tr>
+	</table>
+	<br />
+}

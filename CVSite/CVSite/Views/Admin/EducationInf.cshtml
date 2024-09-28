@@ -1,0 +1,33 @@
+﻿@using CVSite.Models
+@model List<Education>
+@{
+    ViewData["Title"] = "EducationInf";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Education</h1>
+<br />
+<table class="table table-bordered">
+
+	@foreach (var x in Model)
+	{
+		<tr>
+			<td>Title</td>
+			<td>@x.Title</td>
+		</tr><tr>
+			<td>Sub Title</td>
+			<td>@x.SubTitle</td>
+		</tr><tr>
+			<td>GNO</td>
+			<td>@x.GNote</td>
+		</tr><tr>
+			<td>Date</td>
+			<td>@x.Date</td>
+		</tr>
+		<tr>
+		<td><a href="/Admin/EducationGet/@x.ID" class="btn btn-warning">Update</a></td>
+			<td><a href="/Admin/EducationDelete/@x.ID" class="btn btn-danger">Delete</a></td>
+		</tr>	
+	}
+</table>
+<a href="/Add/NewEducation" class="btn btn-primary">New Education</a>

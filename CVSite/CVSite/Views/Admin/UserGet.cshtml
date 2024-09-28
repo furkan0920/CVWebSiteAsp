@@ -1,0 +1,36 @@
+﻿@model CVSite.Models.About
+@{
+    ViewData["Title"] = "UserGet";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>UserGet</h1>
+
+
+<h1>UpdateUser</h1>
+<br />
+@using (Html.BeginForm("UserUpdate", "Admin", FormMethod.Post))
+{
+	@Html.LabelFor(x => x.ID)
+	@Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+	<br />
+	@Html.LabelFor(x => x.Name)
+	@Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+	<br />
+	@Html.LabelFor(x => x.Surname)
+	@Html.TextBoxFor(x => x.Surname, new { @class = "form-control" })
+	<br />
+	@Html.LabelFor(x => x.Address)
+	@Html.TextBoxFor(x => x.Address, new { @class = "form-control" })
+	<br />
+	@Html.LabelFor(x => x.Note)
+	@Html.TextAreaFor(x => x.Note,15,1, new { @class = "form-control" })
+	<br />
+	@Html.LabelFor(x => x.Phone)
+	@Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+	<br />
+	@Html.LabelFor(x => x.Photo)
+	@Html.TextBoxFor(x => x.Photo, new { @class = "form-control" })
+	<br />
+	<button class="btn btn-success">User Update</button>
+}

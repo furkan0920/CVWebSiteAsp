@@ -1,0 +1,23 @@
+﻿@using CVSite.Models
+@model List<Skills>
+@{
+    ViewData["Title"] = "SkillsInf";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Skills</h1>
+<br />
+<table class="table table-bordered">
+
+	@foreach (var x in Model)
+	{
+		<tr>
+			<td>@x.Skill</td>
+		</tr>
+		<tr>
+			<td><a href="/Admin/SkillsGet/@x.ID" class="btn btn-warning">Update</a></td>
+			<td><a href="/Admin/SkillsDelete/@x.ID" class="btn btn-danger">Delete</a></td>
+		</tr>
+	}
+</table>
+<a href="/Add/NewSkills" class="btn btn-primary">New Skills</a>

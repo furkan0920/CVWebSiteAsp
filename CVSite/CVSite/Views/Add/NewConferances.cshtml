@@ -1,0 +1,15 @@
+﻿@model CVSite.Models.Conferance
+@{
+    ViewData["Title"] = "NewConferances";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>NewConferances</h1>
+<br />
+<form class="form-group" method="post">
+
+    @Html.LabelFor(x => x.Conferances)
+    @Html.TextBoxFor(x => x.Conferances, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Conferances Add</button>
+</form>

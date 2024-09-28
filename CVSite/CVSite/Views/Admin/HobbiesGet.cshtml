@@ -1,0 +1,18 @@
+﻿@model CVSite.Models.Hobbies
+@{
+    ViewData["Title"] = "HobbiesGet";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Hobbies</h1>
+<br />
+@using (Html.BeginForm("HobbiesUpdate", "Admin", FormMethod.Post))
+{
+	@Html.LabelFor(x => x.ID)
+	@Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+	<br />
+	@Html.LabelFor(x => x.Hobbie)
+	@Html.TextBoxFor(x => x.Hobbie, new { @class = "form-control" })
+	<button class="btn btn-success">Update</button>
+}
+
